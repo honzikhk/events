@@ -1,2 +1,3 @@
 created app events
 added new app to settings/instaled aplications
+made model Event
