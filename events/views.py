@@ -6,11 +6,17 @@ from events.forms import EventForm
 
 class EventsListView(ListView):
     model = Event
-    # queryset = Event.objects.all().order_by('-date')
     template_name = "events.html"
 
 
 class CreateEventView(CreateView):
-    template_name = "create_event.html"
+    template_name = "events.html"
     form_class = EventForm
     model = Event
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(CreateEventView, self).get_context_data(**kwargs)
+        context.update({
+            'all_events': Event.objects.all().order_by("-id"),
+        })
+        return context

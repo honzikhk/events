@@ -5,3 +5,6 @@ include into main urls.py
 created file urls.py in app events
 created EventsLIstView
 urls patterns in events.urls
+step by step to success
+move create event to events (homepage), so now its one page only
+sorting data by id -> from oldest to newest (fix - because in case of editing could make mess)

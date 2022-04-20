@@ -1,14 +1,23 @@
 {% extends "base.html" %}
 
-{% block body %}
+{% block form %}
+    <form action="{% url "create_event" %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+        <input type="submit" value="Submit">
+    </form><br><br>
+
     <div>
-        <div>Date</div>
-        <div>Time</div>
-        <div>Amount</div>
-        <div>Poo</div>
-        <div>Note</div>
-    </div>
-    {% for event in object_list %}
-        <p>{{ event.date }} | {{ event.time }} | {{ event.eated }} | {{ event.poo }} | {{ event.note }}</p>
-    {% endfor %}
-{% endblock body %}
+        <span>Date</span>
+        <span>Time</span>
+        <span>Amount</span>
+        <span>Poo</span>
+        <span>Note</span>
+    </div><br>
+
+    {% for event in all_events %}
+    <p>{{ event.date }} | {{ event.time }} | {{ event.eated }} | {{ event.poo }} | {{ event.note }}</p>
+
+
+{% endfor %}
+{% endblock form %}

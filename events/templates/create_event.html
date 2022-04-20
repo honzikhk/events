@@ -5,5 +5,20 @@
     {% csrf_token %}
     {{ form }}
         <input type="submit" value="Submit">
-    </form>
+    </form><br><br>
+
+    <div>
+        <span>Date</span>
+        <span>Time</span>
+        <span>Amount</span>
+        <span>Poo</span>
+        <span>Note</span>
+    </div><br>
+
+    {% for event in all_events %}
+    <p>{{ event.date }} | {{ event.time }} | {{ event.eated }} | {{ event.poo }} | {{ event.note }}</p>
+
+
+{% endfor %}
 {% endblock form %}
+
