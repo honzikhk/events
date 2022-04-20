@@ -1,3 +1,7 @@
 created app events
 added new app to settings/instaled aplications
 made model Event
+include into main urls.py
+created file urls.py in app events
+created EventsLIstView
+urls patterns in events.urls

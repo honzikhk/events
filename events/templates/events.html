@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block body %}
+    {% for event in object_list %}
+        <p>{{ event }}</p>
+    {% endfor %}
+{% endblock body %}
