@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
 {% block body %}
+    <div>
+        <div>Date</div>
+        <div>Time</div>
+        <div>Amount</div>
+        <div>Poo</div>
+        <div>Note</div>
+    </div>
     {% for event in object_list %}
-        <p>{{ event }}</p>
+        <p>{{ event.date }} | {{ event.time }} | {{ event.eated }} | {{ event.poo }} | {{ event.note }}</p>
     {% endfor %}
 {% endblock body %}
