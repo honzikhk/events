@@ -8,3 +8,9 @@ urls patterns in events.urls
 step by step to success
 move create event to events (homepage), so now its one page only
 sorting data by id -> from oldest to newest (fix - because in case of editing could make mess)
+
+del import eventlistview in urls.py
+comment class eventlistview in views.py
+del template create_event.html
+comment line poo in class EventForm in forms.py
+add initial argument in class eventform in forms.py

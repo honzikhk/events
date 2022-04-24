@@ -1,4 +1,5 @@
 from django import forms
+import datetime
 
 from events.models import Event
 
@@ -16,9 +17,10 @@ class TimePickerTimeInput(forms.TimeInput):
 
 
 class EventForm(forms.ModelForm):
-    date = forms.DateField(widget=DatePickerDateInput)
-    time = forms.TimeField(widget=TimePickerTimeInput)
-    poo = forms.BooleanField()
+    date = forms.DateField(widget=DatePickerDateInput, initial=datetime.date.today)
+    time = forms.TimeField(widget=TimePickerTimeInput, initial=datetime.datetime.now)
+    note = forms.CharField(required=False)
+    #poo = forms.BooleanField(required=False)
 
     class Meta:
         model = Event

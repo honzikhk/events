@@ -3,10 +3,10 @@ from django.views.generic import ListView, CreateView
 from events.models import Event
 from events.forms import EventForm
 
-
-class EventsListView(ListView):
-    model = Event
-    template_name = "events.html"
+#
+# class EventsListView(ListView):
+#     model = Event
+#     template_name = "events.html"
 
 
 class CreateEventView(CreateView):
