@@ -3,10 +3,18 @@ from django.shortcuts import resolve_url
 
 
 class Event(models.Model):
+    POO_YES = "Yes"
+    POO_NO = "No"
+
+    POO_CHOICES = (
+        (POO_YES, "Yes"),
+        (POO_NO, "No"),
+    )
+
     date = models.DateField()
     time = models.TimeField()
     eated = models.IntegerField()
-    poo = models.BooleanField(default=False)
+    poo = models.CharField(choices=POO_CHOICES, default="No", max_length=5)
     note = models.CharField(max_length=200)
 
     def get_absolute_url(self):
