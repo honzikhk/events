@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
-<link rel="stylesheet" href="{% static "base.css" %}">
+<link rel="stylesheet" href="{% static "css/base.css" %}">
 {% block form %}
     <div class="container">
     <form action="{% url "create_event" %}" method="post">
     {% csrf_token %}
-        <div class="item">Date: {{ form.date }} Time: {{ form.time }}</div>
-        <div class="item">Food: {{ form.eated }}</div>
-        <div class="item">Poo: {{ form.poo }}</div>
+        <span>Date: {{ form.date }} Time: {{ form.time }}</span><br>
+        <span>Food: {{ form.eated }} Poo: {{ form.poo }}</span>
+
         <div class="item">Note: {{ form.note }}</div>
         <div class="item"><input type="submit" value="Submit"></div>
     </form>
@@ -24,7 +24,6 @@
     {% for event in all_events %}
 
     <p>{{ event.date }} | {{ event.time }} | {{ event.eated }} | {{ event.poo }} | {{ event.note }}</p>
-
 
     {% endfor %}
 {% endblock form %}

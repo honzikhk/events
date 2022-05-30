@@ -1,5 +1,18 @@
 
 body {
     background: aquamarine;
-    font-size: large;
+    color: black;
+    text-align: center;
+}
+
+.container {
+    display: block;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+    margin-right: 300px;
+
 }

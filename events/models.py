@@ -15,7 +15,7 @@ class Event(models.Model):
     time = models.TimeField()
     eated = models.IntegerField()
     poo = models.CharField(choices=POO_CHOICES, default="No", max_length=5)
-    note = models.CharField(max_length=200)
+    note = models.TextField(null=True, blank=True, max_length=1000)
 
     def get_absolute_url(self):
         return resolve_url('create_event')
