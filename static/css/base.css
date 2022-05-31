@@ -7,14 +7,14 @@ body {
 
 .container {
     display: block;
-    padding-right: 200px;
-    padding-left: 200px;
+    border: 1px solid black;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .item {
-    display: flex;
+    display: contents;
     flex-direction: column;
     margin-left: 300px;
     margin-right: 300px;
-
 }

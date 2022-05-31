@@ -20,7 +20,7 @@ class EventForm(forms.ModelForm):
     date = forms.DateField(widget=DatePickerDateInput, initial=datetime.date.today)
     time = forms.TimeField(widget=TimePickerTimeInput, initial=datetime.datetime.now)
     note = forms.CharField(required=False)
-    #poo = forms.BooleanField(required=False)
+    poo = forms.BooleanField(required=False)
 
     class Meta:
         model = Event

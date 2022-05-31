@@ -5,8 +5,8 @@
     <div class="container">
     <form action="{% url "create_event" %}" method="post">
     {% csrf_token %}
-        <span>Date: {{ form.date }} Time: {{ form.time }}</span><br>
-        <span>Food: {{ form.eated }} Poo: {{ form.poo }}</span>
+        <span class="item">Date: {{ form.date }} Time: {{ form.time }}</span><br>
+        <span class="item">Food: {{ form.eated }} Poo: {{ form.poo }}</span>
 
         <div class="item">Note: {{ form.note }}</div>
         <div class="item"><input type="submit" value="Submit"></div>
@@ -21,7 +21,7 @@
         <span>Poo</span>
         <span>Note</span>
     </div><br>
-    {% for event in all_events %}
+    {% for event in last_ten_events %}
 
     <p>{{ event.date }} | {{ event.time }} | {{ event.eated }} | {{ event.poo }} | {{ event.note }}</p>
 
