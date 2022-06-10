@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+{% block form %}
+<h1>All history ({{ object_list.count }} records)</h1>
+    <a href="{% url "create_event" %}">Back to homepage</a>
+{% for event in object_list %}
+    <p>{{ event.date }} | {{ event.time }} | {{ event.eated }} | {{ event.poo }} | {{ event.note }}</p>
+{% endfor %}
+{% endblock form %}

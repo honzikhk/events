@@ -26,4 +26,6 @@
     <p>{{ event.date }} | {{ event.time }} | {{ event.eated }} | {{ event.poo }} | {{ event.note }}</p>
 
     {% endfor %}
+    <a href="{% url "allevents" %}">View all</a>
+    <div>Today, Honzik ate {{ ate_today }}</div>
 {% endblock form %}
