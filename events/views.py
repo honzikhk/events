@@ -1,5 +1,6 @@
 import datetime
 
+from django.shortcuts import render
 from django.views.generic import CreateView, ListView
 from events.models import Event
 from events.forms import EventForm
@@ -35,4 +36,12 @@ class AllEventView(ListView):
     template_name = "allevents.html"
     queryset = Event.objects.all()
 
+
+def index(request):
+    events = Event.objects.all()
+
+    context = {
+        "events": events
+    }
+    return render(request, "index.html", context)
 

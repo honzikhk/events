@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
-<link rel="stylesheet" href="{% static "css/base.css" %}">
+
 {% block form %}
     <div class="container">
     <form action="{% url "create_event" %}" method="post">
@@ -29,3 +28,4 @@
     <a href="{% url "allevents" %}">View all</a><br><br>
     <div>Today, Honzik ate {{ ate_today }}</div>
 {% endblock form %}
+
