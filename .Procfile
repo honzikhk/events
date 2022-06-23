@@ -1,1 +1,1 @@
-web:gunicorn events.wsgi
+web:gunicorn food-events.wsgi
